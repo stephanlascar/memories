@@ -1,0 +1,18 @@
+{% for photo in photos|reverse %}
+<div class="tile" data-ftg-keep-aspect-ratio="true">
+    {% if photo.thumbnail %}
+        <a class="tile-inner" href="{{ url_for('show_photo', image_id=photo._id) }}">
+            <img class="item" src="{{ url_for('thumbnail', filename=photo.thumbnail) }}" data-src="{{ url_for('image', filename=photo.filename) }}" />
+        </a>
+    {% else %}
+        <video class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+            <source src="{{ url_for('image', filename=photo.filename) }}">
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    {% endif %}
+
+</div>
+{% endfor %}

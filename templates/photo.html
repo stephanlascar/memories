@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://use.fontawesome.com/09e796bdcd.js"></script>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="left-bar">
+                <div class="head">
+                    <div class="logo"></div>
+                </div>
+                <div class="nav">
+                    <div class="navitem"><i class="fa fa-search" aria-hidden="true"></i>Rechercher</div>
+                    <div class="navitem selected"><i class="fa fa-picture-o" aria-hidden="true"></i>Souvenirs<span class="refresh"></span></div>
+                    <div class="navitem"><i class="fa fa-calendar" aria-hidden="true"></i>Timeline</div>
+                    <div class="navitem"><i class="fa fa-book" aria-hidden="true"></i>Albums<span class="add"><i></i></span><span class="search"><i></i></span></div>
+                    <div class="navitem"><i class="fa fa-map-marker" aria-hidden="true"></i>Lieux</div>
+                    <div class="navitem"><i class="fa fa-trash-o" aria-hidden="true"></i>Poubelle</div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="gallery" class="final-tiles-gallery">
+                    <div class="ftg-items">
+                        {{ photo }}
+                    </div>
+                </div>
+            </div>
+
+            <div id="top-bar">
+
+            </div>
+        </div>
+    </body>
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+</html>

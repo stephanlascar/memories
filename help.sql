@@ -1,0 +1,1 @@
+select modelId, orientation, name, createDate, isInTrash, inTrashDate, isMissing, fileModificationDate, width, height, fileName, imagePath, imageDate, fileCreationDate  from RKMaster limit 1;
